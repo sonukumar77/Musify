@@ -148,7 +148,7 @@ const TopNav = (props) => {
 
           <FormControlLabel sx={{pl:3}}
             control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked onChange={toggleTheme}/>}
-            label="MUI switch"
+            label=""
           />
 
         </Toolbar>
