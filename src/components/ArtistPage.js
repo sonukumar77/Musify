@@ -21,14 +21,14 @@ const ArtistPage = () => {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(`http://api.napster.com/v2.2/artists/${artist_id}?apikey=${NAPSTER_API_KEY}`);
+            const response = await fetch(`https://api.napster.com/v2.2/artists/${artist_id}?apikey=${NAPSTER_API_KEY}`);
             const data = await response.json();
             if (data.artists.length > 0) {
 
                 setArtistDetails(data.artists[0])
                 // console.log(data.artists[0])
             }
-            const song_response = await fetch(`http://api.napster.com/v2.2/artists/${artist_id}/tracks?apikey=${NAPSTER_API_KEY}&limit=5`);
+            const song_response = await fetch(`https://api.napster.com/v2.2/artists/${artist_id}/tracks?apikey=${NAPSTER_API_KEY}&limit=5`);
             const song_data = await song_response.json();
             setSongList(song_data.tracks);
             // console.log(song_data.tracks)
